@@ -1,0 +1,32 @@
+#Knape account
+Host github.com-knape
+HostName github.com
+User git
+UseKeychain yes
+AddKeysToAgent yes
+IdentityFile ~/.ssh/monoscope
+
+#philipknape account
+Host github.com
+HostName github.com
+User git
+UseKeychain yes
+AddKeysToAgent yes
+IdentityFile ~/.ssh/monoscope
+
+#Segflow account
+Host segflow.github.com
+HostName github.com
+User git
+UseKeychain yes
+AddKeysToAgent yes
+IdentityFile ~/.ssh/segflow
+
+#Openparking account
+Host openparking.github.com
+HostName github.com
+User git
+UseKeychain yes
+AddKeysToAgent yes
+IdentityFile ~/.ssh/openparking
+

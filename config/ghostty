@@ -1,0 +1,4 @@
+link-url = true
+keybind = shift+enter=text:\x1b\r
+minimum-contrast = 1.5
+scrollback-limit = 10000
