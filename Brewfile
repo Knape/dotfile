@@ -1,6 +1,3 @@
-# Taps
-tap "oven-sh/bun"
-
 # C/C++ resolver library and DNS resolver utilities
 brew "adns"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -41,6 +38,8 @@ brew "gh"
 brew "git"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Git extension for versioning large files (required by gitconfig `filter.lfs`)
+brew "git-lfs"
 # Open-source GitLab command-line tool
 brew "glab"
 # Statically typed language for the Erlang VM
@@ -97,8 +96,6 @@ brew "nghttp2"
 brew "node"
 # Manage multiple Node.js versions
 brew "nvm"
-# Incredibly fast JavaScript runtime, bundler, transpiler, and package manager
-brew "oven-sh/bun/bun"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Execute binaries from Python packages in isolated environments
@@ -150,9 +147,9 @@ brew "zplug"
 # UNIX shell (command interpreter)
 brew "zsh"
 # App to build and share containerised applications and microservices
-cask "docker"
+cask "docker-desktop"
 # Screen colour temperature controller
-cask "flux"
+cask "flux-app"
 cask "font-consolas-for-powerline"
 cask "font-fira-code"
 # Developer font with ligatures and extra symbols

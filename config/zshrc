@@ -38,11 +38,12 @@ plugins=(
 # Docker CLI completions
 fpath=("$HOME/.docker/completions" $fpath)
 
+# This PATH needs to be set before all other modifications
+# (and before Oh-My-ZSH, so plugins like `gh` can find brew binaries):
+export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+
 # Sourcing the Oh-My-ZSH source:
 source "$ZSH/oh-my-zsh.sh"
-
-# This PATH needs to be set before all other modifications:
-export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
 
 # === Plugin management ===
 
@@ -73,3 +74,7 @@ export PATH="$HOME/.opencode/bin:$PATH"
 
 # Antigravity
 export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+
+# snowflake-cli snowflake-managed PATH begin
+export PATH="/Users/knape/.local/share/snowflake-cli/bin:$PATH"
+# snowflake-cli snowflake-managed PATH end

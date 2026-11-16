@@ -4,6 +4,7 @@ HostName github.com
 User git
 UseKeychain yes
 AddKeysToAgent yes
+IdentitiesOnly yes
 IdentityFile ~/.ssh/monoscope
 
 #philipknape account
@@ -12,6 +13,7 @@ HostName github.com
 User git
 UseKeychain yes
 AddKeysToAgent yes
+IdentitiesOnly yes
 IdentityFile ~/.ssh/monoscope
 
 #Segflow account
@@ -20,6 +22,7 @@ HostName github.com
 User git
 UseKeychain yes
 AddKeysToAgent yes
+IdentitiesOnly yes
 IdentityFile ~/.ssh/segflow
 
 #Openparking account
@@ -28,5 +31,6 @@ HostName github.com
 User git
 UseKeychain yes
 AddKeysToAgent yes
+IdentitiesOnly yes
 IdentityFile ~/.ssh/openparking
 

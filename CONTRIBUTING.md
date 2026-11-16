@@ -10,9 +10,3 @@ brew bundle dump --force --describe --no-restart
 bash ./vscode/versions.sh
 ```
 
-
-## Dumping `crontab` state
-
-```bash
-crontab -l > crontab/crontab
-```
