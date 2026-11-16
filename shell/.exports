@@ -32,7 +32,7 @@ PATH="$BUN_INSTALL/bin:$PATH"
 
 # Editor:
 # export EDITOR="$(which nano)"
-export EDITOR="code -w"
+export EDITOR="zed --wait"
 
 # GPG:
 export GPG_TTY="$(tty)"

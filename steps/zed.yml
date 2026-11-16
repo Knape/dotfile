@@ -1,0 +1,8 @@
+---
+
+# Zed editor (extensions auto-install from `auto_install_extensions`):
+- link:
+    ~/.config/zed/settings.json:
+      path: zed/settings.json
+      create: true
+      force: true

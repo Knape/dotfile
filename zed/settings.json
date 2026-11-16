@@ -1,0 +1,88 @@
+// Zed settings: https://zed.dev/docs/configuring-zed
+// Linked to `~/.config/zed/settings.json` by `steps/zed.yml`.
+// Zed resolves the symlink before saving, so UI changes land in this file.
+{
+  "cli_default_open_behavior": "new_window",
+  "base_keymap": "Cursor",
+  "icon_theme": "Zed (Default)",
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+
+  // Panels:
+  "project_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "git_panel": {
+    "dock": "right"
+  },
+  "agent": {
+    "dock": "left",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+
+  // Same as Cursor: never reformat on save, format explicitly instead.
+  "format_on_save": "off",
+
+  // Do not share anything with anyone:
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+
+  // Zed equivalents of the Cursor extensions in use
+  // (eslint, prettier, tailwind, python, yaml, remote dev are built in):
+  "auto_install_extensions": {
+    "biome": true,
+    "codebook": true,
+    "docker-compose": true,
+    "dockerfile": true,
+    "env": true,
+    "github-actions": true,
+    "html": true,
+    "markdownlint": true,
+    "mdx": true,
+    "prisma": true,
+    "sql": true,
+    "toml": true
+  },
+
+  // Ported from Cursor: bigger tsserver heap, update imports on file move.
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "tsserver": {
+            "maxTsServerMemory": 8192
+          },
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      }
+    }
+  },
+
+  "context_servers": {
+    "posthog": {
+      "enabled": true,
+      "url": "https://mcp.posthog.com/mcp"
+    }
+  }
+}

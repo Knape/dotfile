@@ -20,7 +20,7 @@ What's in there?
 - all my `brew` dependencies including: applications, fonts, etc. See [`Brewfile`](https://github.com/sobolevn/dotfiles/blob/master/Brewfile)
 - all my `macOS` configuration. See [`macos`](https://github.com/sobolevn/dotfiles/blob/master/macos/)
 - all my shell configuration, including [my own `sobole`](https://github.com/sobolevn/sobole-zsh-theme) theme. See [`shell/`](https://github.com/sobolevn/dotfiles/tree/master/shell) and [`config/zshrc`](https://github.com/sobolevn/dotfiles/blob/master/config/zshrc)
-- all my `vscode` configuration, including [my own `pustota`](https://github.com/sobolevn/pustota) theme. See [`vscode/`](https://github.com/sobolevn/dotfiles/tree/master/vscode)
+- my [`zed`](https://zed.dev) configuration. See [`zed/`](zed/)
 - all my [QuickLook](https://github.com/sindresorhus/quick-look-plugins) customizations and [dev utilities](https://github.com/sbarex/SourceCodeSyntaxHighlight)
 
 
@@ -45,39 +45,11 @@ to set things up. Steps:
 3. Run: [`bash ./install`](https://github.com/sobolevn/dotfiles/blob/master/install)
 
 
-## VSCode
+## Zed
 
-I loved [my `Sublime`](https://github.com/sobolevn/dotfiles/tree/34ee628e515f7fc782566b946a3b4ca906bad7ba/sublime3-conf).
-It was fast and beautiful.
-The main reason is that `Sublime` is almost unmaintained.
-Packages are also abandoned.
-
-So, I have switched to [`vscode`](https://formulae.brew.sh/cask/visual-studio-code).
-It solved almost all issues I had with `Sublime`.
-Here's how my new `vscode` setup looks like, using my own theme called [`pustota`](https://github.com/sobolevn/pustota):
-
-![sobolevn's vscode for Python](https://raw.githubusercontent.com/sobolevn/dotfiles/master/media/vscode.png)
-
-Here's [a list of packages](https://github.com/sobolevn/dotfiles/blob/master/Brewfile) (see `vscode` calls at the bottom) I use:
-
-- [`pustota`](https://github.com/sobolevn/pustota) theme
-- [`Python`](https://github.com/Microsoft/vscode-python) plugin
-- [`editorconfig`](https://editorconfig.org/) integration
-
-I try to keep my `vscode` setup as simple as possible.
-It was also heavily influenced by [`makevscodeawesome`](https://makevscodeawesome.com/).
-
-### DX
-
-- `cmd` + `p` opens up file navigation in the middle of the screen, so you don't have to move your eyes a lot to find most common UI element
-
-- `ctrl` + `f` opens global search
-
-![vscode ctrl+f widget](https://raw.githubusercontent.com/sobolevn/dotfiles/master/media/vscode-cmd-shift-f.png)
-
-- `cmd` + `t` opens global symbols index
-
-![vscode cmd+t widget](https://raw.githubusercontent.com/sobolevn/dotfiles/master/media/vscode-cmd-t.png)
+[`zed`](https://zed.dev) is the main editor (`$EDITOR` is `zed --wait`).
+Settings live in [`zed/settings.json`](zed/settings.json) and are linked by [`steps/zed.yml`](steps/zed.yml).
+Language extensions install automatically via `auto_install_extensions`.
 
 
 ## CLI
