@@ -105,8 +105,6 @@ cask "obsidian"
 cask "google-chrome"
 cask "topnotch"
 cask "the-unarchiver"
-cask "flux-app"
-cask "telegram"
 
 # === QuickLook ===
 cask "syntax-highlight"
