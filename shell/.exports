@@ -68,16 +68,22 @@ export BAT_THEME="$SOBOLE_SYNTAX_THEME"
 # === Version managers ===
 
 # nvm:
+# ponytail: `--no-use` skips nvm resolving the `default` alias (~300ms per shell).
+# We put the newest installed node matching that alias (e.g. `24` -> v24.x) on PATH,
+# same result as `nvm use default`. Aliases like `lts/*` fall back to the slow path.
 export NVM_DIR="$HOME/.nvm"
 if [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ]; then
-  source "$(brew --prefix)/opt/nvm/nvm.sh"
+  source "$(brew --prefix)/opt/nvm/nvm.sh" --no-use
+  if [ -f "$NVM_DIR/alias/default" ]; then
+    _nvm_node=( "$NVM_DIR"/versions/node/v${$(<"$NVM_DIR/alias/default")#v}(|.*)(Nn/On[1]) )
+    if (( $#_nvm_node )); then
+      PATH="$_nvm_node/bin:$PATH"
+    else
+      nvm use default --silent >/dev/null
+    fi
+    unset _nvm_node
+  fi
 fi
-
-# pyenv:
-command -v pyenv &>/dev/null && eval "$(pyenv init --path)"
-
-# rbenv:
-command -v rbenv &>/dev/null && eval "$(rbenv init -)"
 
 # rustup:
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"

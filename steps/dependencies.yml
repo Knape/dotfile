@@ -7,3 +7,18 @@
     stdout: true
     stderr: true
     include: ['tap', 'brew', 'cask']
+
+# Self-updating native installers (not in the Brewfile on purpose):
+- shell:
+  - command: '[ -x "$HOME/.local/bin/claude" ] || curl -fsSL https://claude.ai/install.sh | bash'
+    description: Install Claude Code CLI (if not already installed)
+    stdout: true
+    stderr: true
+  - command: '[ -x "$HOME/.bun/bin/bun" ] || curl -fsSL https://bun.sh/install | bash'
+    description: Install bun (if not already installed)
+    stdout: true
+    stderr: true
+  - command: '[ -x "$HOME/.local/bin/uv" ] || curl -LsSf https://astral.sh/uv/install.sh | UV_NO_MODIFY_PATH=1 sh'
+    description: Install uv (if not already installed)
+    stdout: true
+    stderr: true

@@ -66,15 +66,9 @@ source "$HOME/.shell/.completions"
 if [[ -f "$HOME/.shell_env_local" ]]; then
   source "$HOME/.shell_env_local"
 fi
-# opencode
-export PATH="$HOME/.opencode/bin:$PATH"
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # Antigravity
 export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
-
-# snowflake-cli snowflake-managed PATH begin
-export PATH="/Users/knape/.local/share/snowflake-cli/bin:$PATH"
-# snowflake-cli snowflake-managed PATH end
