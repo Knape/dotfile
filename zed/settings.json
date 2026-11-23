@@ -3,7 +3,7 @@
 // Zed resolves the symlink before saving, so UI changes land in this file.
 {
   "cli_default_open_behavior": "new_window",
-  "base_keymap": "Cursor",
+  "base_keymap": "VSCode",
   "icon_theme": "Zed (Default)",
   "theme": {
     "mode": "dark",
