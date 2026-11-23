@@ -1,7 +1,3 @@
-# The following lines were added by Docker Desktop to add commands to your PATH.
-export PATH="$PATH:/Users/philip.knape/.docker/bin"
-# End of Docker Desktop section.
-
 #!/usr/bin/env bash
 
 # I do not use bash directly.
@@ -10,6 +6,9 @@ export PATH="$PATH:/Users/philip.knape/.docker/bin"
 # global:
 PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 export PATH
+
+# Docker Desktop:
+export PATH="$PATH:$HOME/.docker/bin"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
