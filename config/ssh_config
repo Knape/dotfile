@@ -5,16 +5,7 @@ User git
 UseKeychain yes
 AddKeysToAgent yes
 IdentitiesOnly yes
-IdentityFile ~/.ssh/monoscope
-
-#philipknape account
-Host github.com
-HostName github.com
-User git
-UseKeychain yes
-AddKeysToAgent yes
-IdentitiesOnly yes
-IdentityFile ~/.ssh/monoscope
+IdentityFile ~/.ssh/id_ed25519
 
 #Segflow account
 Host segflow.github.com
@@ -33,4 +24,3 @@ UseKeychain yes
 AddKeysToAgent yes
 IdentitiesOnly yes
 IdentityFile ~/.ssh/openparking
-
