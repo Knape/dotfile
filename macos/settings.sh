@@ -26,7 +26,8 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.menuextra.battery ShowTime -string "NO"
 
 # Disable startup noise:
-sudo nvram SystemAudioVolume=%01
+# (skipped without cached sudo, e.g. on a non-admin managed Mac)
+sudo -n nvram SystemAudioVolume=%01 2>/dev/null || echo 'Skipping startup noise setting (needs sudo).'
 
 # Scrollbars visible when scrolling:
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
@@ -142,17 +143,21 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 
 # === Safari ===
 
-# Privacy: don’t send search queries to Apple
-defaults write com.apple.Safari UniversalSearchEnabled -bool false
-defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+# Safari's prefs are sandboxed: writing them needs Full Disk Access
+# for the terminal, so skip instead of aborting the whole script.
+{
+  # Privacy: don’t send search queries to Apple
+  defaults write com.apple.Safari UniversalSearchEnabled -bool false
+  defaults write com.apple.Safari SuppressSearchSuggestions -bool true
 
-# Improve Safari security
-defaults write com.apple.Safari \
-  com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled \
-  -bool false
-defaults write com.apple.Safari \
-  com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabledForLocalFiles \
-  -bool false
+  # Improve Safari security
+  defaults write com.apple.Safari \
+    com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled \
+    -bool false
+  defaults write com.apple.Safari \
+    com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabledForLocalFiles \
+    -bool false
+} 2>/dev/null || echo 'Skipping Safari settings (terminal needs Full Disk Access).'
 
 
 # === Text editing ===
