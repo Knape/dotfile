@@ -61,9 +61,6 @@ defaults write com.apple.dock tilesize -int 56
 # Show indicator lights for open apps in Dock:
 defaults write com.apple.dock show-process-indicators -bool true
 
-# Dock size and location:
-defaults write com.apple.Dock size-immutable -bool yes
-
 # Show Dock instantly:
 defaults write com.apple.dock autohide-delay -float 0
 
