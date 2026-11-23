@@ -38,6 +38,9 @@
     ~/.gitconfig_local: config/gitconfig_local
     ~/.gitignore_global: config/gitignore
     ~/.gitattributes_global: config/gitattributes
+    ~/.config/git/allowed_signers:
+      path: config/git_allowed_signers
+      create: true
 
     # Tools:
     ~/.psqlrc: config/psqlrc

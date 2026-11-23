@@ -1,3 +1,8 @@
 [user]
   email = philip.knape@gmail.com
   name = Philip Knape
+  signingkey = ~/.ssh/id_ed25519.pub
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  allowedSignersFile = ~/.config/git/allowed_signers
